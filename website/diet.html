@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../favicon-16x16.png" />
+    <title>NAME</title>
+    <script src="https://unpkg.com/htmlincludejs"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="diet.css" />
+  </head>
+</html>
+<body>
+     <div>  <nav class="navbar">
+    <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
+            <i class="fa fa-bars"></i>
+        </label>
+    <a href="#" class="logo" style="color: black;">logo</a>
+    <input type="checkbox" id="chkToggle"></input>
+    <ul class="main-nav" id="js-menu">
+      <li>
+        <a  href="./index.html"  class="nav-links">Home</a>
+      </li>
+      <li>
+        <a href="./explore.html" class="nav-links">Explore</a>
+      </li>
+      <li>
+        <a href="./diet.html" id="current" class="nav-links">Diet</a>
+      </li>
+      <li>
+        <a href="./stories.html" class="nav-links">Your Stories</a>
+      </li>
+      <li>
+        <a href="./login.html" class="login nav-links">Login/Register</a>
+      </li>
+      <li class="signout">
+        <a href="#" class="nav-links"> Signout</a></li>
+    </ul>
+  </nav></div>
+<div class="doodle">
+    <figure>
+        <img class="diet-image" src="../Diet1.png" alt="" srcset="">
+    </figure>
+</div>
+  <ul class="titles">
+      <li class="diet-link">OVERVIEW</li>
+      <li class="diet-link" >HIGH FIBRE</li>
+      <li class="diet-link" >LEAN PROTEIN</li>
+      <li class="diet-link" >ANTI INFLAMATORY</li>
+      <li class ="diet-link">DASH DIET</li>
+      <li class="diet-link" >LOW FAT</li>
+      <li class ="diet-link">LOW CARBOHYDRATES</li>
+  </ul>
+  <div class="diet-content overview">
+      <div class="content"> <a target="_blank" href="https://www.healthline.com/health/pcos-diet"> Can My Diet Relieve Symptoms of Polycystic Ovary Syndrome (PCOS)?</a></div>
+      <div class="content"> <a target="_blank" href="https://www.instagram.com/pcodecoded/">Recipes and Snacks for POCS by pcodecoded</a> </div>
+      <div class="content"> <a target="_blank" href="https://www.eatright.org/health/pregnancy/fertility-and-reproduction/polycystic-ovarian-syndrome#:~:text=Focusing%20on%20whole%2Dgrains%2C%20fruits,Don%27t%20skip%20meals.">Diet and PCOS</a> </div>
+      <div class="content"> <a target="_blank" href="https://www.unlockfood.ca/en/Articles/Women-s-Health/Nutrition-Tips-for-Polycystic-Ovary-Syndrome-PCOS.aspx">Nutrition Tips for Polycystic Ovary Syndrome (PCOS)</a></div>
+      <div class="content"> <a target="_blank" href="https://www.onpoint-nutrition.com/pcos-diet">PCOS Diet</a></div>
+      <div class="content"> <a target="_blank" href="https://www.medicalnewstoday.com/articles/323002">What to eat if you have PCOS</a> </div>
+  </div>
+  <div class="diet-content high-fibre">
+      <div class="content"><a href="https://www.healthline.com/nutrition/22-high-fiber-foods#TOC_TITLE_HDR_4" target="_blank">22 High Fiber Foods You Should Eat</a></div>
+      <div class="content"><a href="https://gypsyplate.com/cauliflower-peas-masala/" target="_blank">Masala Cauliflower with Green Peas</a></div>
+      <div class="content"><a href="https://biancazapatka.com/en/vegan-keto-bread/" target="_blank">Vegan Almond Bread</a></div>
+      <div class="content"><a href="https://recipes.timesofindia.com/recipes/bajra-and-cauliflower-roti/rs57629039.cms" target="_blank">Bajra and Cauliflower Roti Recipe</a></div>
+      <div class="content"><a href="https://www.tarladalal.com/jowar-and-vegetable-porridge-3544r" target="_blank">Jowar Vegetable Porridge</a></div>
+      <div class="content"><a href="https://www.archanaskitchen.com/jowar-bajra-garlic-roti-recipe" target="_blank">Jowar Bajra Garlic Roti</a></div>
+      <div class="content"><a href="https://www.tarladalal.com/palak-kale-and-apple-juice-kale-spinach-apple-juice-40527r" target="_blank">Palak,Kale and Apple juice</a></div>
+      <div class="content"><a href="https://www.tarladalal.com/whole-wheat-methi-khakhra-822r" target="_blank">Wholewheat, methi khakhra</a></div>
+  </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script type="module">
+  import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.9/firebase-app.js'
+  const firebaseConfig = {
+    apiKey: 'AIzaSyBGPNWZQ0NhfIJZ3AvdU0xp89fte8zfM3s',
+    authDomain: 'gdsc-27141.firebaseapp.com',
+    databaseURL: 'https://gdsc-27141-default-rtdb.firebaseio.com',
+    projectId: 'gdsc-27141',
+    storageBucket: 'gdsc-27141.appspot.com',
+    messagingSenderId: '701196602653',
+    appId: '1:701196602653:web:afc79c572a3929a19fa5f4',
+    measurementId: 'G-755Y8K0P37',
+  }
+  const app = initializeApp(firebaseConfig)
+  import {
+    getDatabase,
+    ref,
+    set,
+    child,
+    get,
+    update,
+    remove,
+  } from 'https://www.gstatic.com/firebasejs/9.6.9/firebase-database.js'
+  const db = getDatabase()
+  const auth = getAuth(app)
+  const user = auth.currentUser
+  import {
+    getAuth,
+    signInWithEmailAndPassword,
+    createUserWithEmailAndPassword,
+    GoogleAuthProvider,
+    signInWithPopup,
+    signOut,
+    onAuthStateChanged,
+    browserSessionPersistence,
+    setPersistence,
+  } from 'https://www.gstatic.com/firebasejs/9.6.9/firebase-auth.js'
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      const uid = user.uid
+      const email = user.email
+      console.log('State chnage')
+      console.log(uid, email)
+      const login = document.querySelector('.login')
+      login.style.display = 'none';
+    } else {
+      console.log('state change')
+      console.log('User is not signed')
+      const signout = document.querySelector('.signout')
+      signout.style.display = 'none';
+    }
+  })  
+  const signout = document.querySelector('.signout')
+  signout.addEventListener('click', function (e) {
+    signOut(auth)
+      .then(() => {
+        // Sign-out successful.
+        console.log(auth.currentUser)
+        console.log('signed out')
+        const login = document.querySelector('.login')
+      login.style.display = 'block';
+      })
+      .catch((error) => {
+        // An error happened.
+      })
+  })
+</script>
+
+<script>
+    const links = document.getElementsByClassName('diet-link')
+    // console.log(links)
+    links[0].classList.add('selected')
+    for (const link of links){
+        link.addEventListener('click', function (e){
+            for(const tags of links){
+                if(tags.getAttribute('class')=='diet-link selected'){
+                tags.classList.remove('selected')
+            }
+            }
+            if(link.getAttribute('class')=='diet-link selected'){
+                link.classList.remove('selected')
+            }
+            else(link.classList.add('selected'))
+
+        if(links[1].getAttribute('class')=='diet-link selected'){
+        console.log('no')
+        const high_fibre= document.querySelector('.high-fibre')
+        const all = document.getElementsByClassName('diet-content')
+        console.log(all)
+        for(const each of all){
+            each.style.display = 'none';
+        }
+        high_fibre.style.display="block"
+        }
+})
+
+    if(links[0].getAttribute('class')=='diet-link selected'){
+        console.log('yes')
+        const overview= document.querySelector('.overview')
+        console.log(overview)
+        overview.style.display="block"
+}
+    }
+</script>

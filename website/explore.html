@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../favicon-16x16.png" />
+    <title>NAME</title>
+    <script src="https://unpkg.com/htmlincludejs"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="explore.css">
+  </head>
+ <body>
+  <div>  <nav class="navbar">
+    <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
+            <i class="fa fa-bars"></i>
+        </label>
+    <a href="#" class="logo" style="color: black;">logo</a>
+    <input type="checkbox" id="chkToggle"></input>
+    <ul class="main-nav" id="js-menu">
+      <li>
+        <a href="./index.html" class="nav-links">Home</a>
+      </li>
+      <li>
+        <a href="./explore.html" id="current"  class="nav-links">Explore</a>
+      </li>
+      <li>
+        <a href="./diet.html" class="nav-links">Diet</a>
+      </li>
+      <li>
+        <a href="./stories.html" class="nav-links">Your Stories</a>
+      </li>
+      <li class="signin">
+        <a href="./login.html" class="login nav-links">Login/Register</a>
+      </li>
+      <li class="signout"><a href="#" class=" nav-links">Signout</a></li>
+    </ul>
+  </nav></div>
+  <include src="./story_tiles.html"></include>
+ </body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script type="module">
+  import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.9/firebase-app.js'
+  const firebaseConfig = {
+    apiKey: 'AIzaSyBGPNWZQ0NhfIJZ3AvdU0xp89fte8zfM3s',
+    authDomain: 'gdsc-27141.firebaseapp.com',
+    databaseURL: 'https://gdsc-27141-default-rtdb.firebaseio.com',
+    projectId: 'gdsc-27141',
+    storageBucket: 'gdsc-27141.appspot.com',
+    messagingSenderId: '701196602653',
+    appId: '1:701196602653:web:afc79c572a3929a19fa5f4',
+    measurementId: 'G-755Y8K0P37',
+  }
+  const app = initializeApp(firebaseConfig)
+  import {
+    getDatabase,
+    ref,
+    set,
+    child,
+    get,
+    update,
+    remove,
+  } from 'https://www.gstatic.com/firebasejs/9.6.9/firebase-database.js'
+  const db = getDatabase()
+  const auth = getAuth(app)
+  const user = auth.currentUser
+  import {
+    getAuth,
+    signInWithEmailAndPassword,
+    createUserWithEmailAndPassword,
+    GoogleAuthProvider,
+    signInWithPopup,
+    signOut,
+    onAuthStateChanged,
+    browserSessionPersistence,
+    setPersistence,
+  } from 'https://www.gstatic.com/firebasejs/9.6.9/firebase-auth.js'
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      const uid = user.uid
+      const email = user.email
+      console.log('State chnage')
+      console.log(uid, email)
+      const login = document.querySelector('.login')
+      login.style.display = 'none';
+    } else {
+      console.log('state change')
+      console.log('User is not signed')
+      const signout = document.querySelector('.signout')
+      signout.style.display = 'none';
+    }
+  })  
+  const signout = document.querySelector('.signout')
+  signout.addEventListener('click', function (e) {
+    signOut(auth)
+      .then(() => {
+        // Sign-out successful.
+        console.log(auth.currentUser)
+        console.log('signed out')
+        const login = document.querySelector('.login')
+      login.style.display = 'block';
+      })
+      .catch((error) => {
+        // An error happened.
+      })
+  })   
+</script>

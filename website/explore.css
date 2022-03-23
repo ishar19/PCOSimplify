@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap');
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: black;
+}
+
+body {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  background: linear-gradient(45deg,white, #F4ACC4);
+}
+
+.navbar {
+  font-size: 18px;
+  border: none;
+  padding-bottom: 10px;
+  color: black;
+}
+#current{
+  text-decoration: underline;
+  text-decoration-color: #FF0080;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 3px;
+}
+.main-nav {
+  list-style-type: none;
+  display: none;
+}
+
+.nav-links,
+.logo {
+  text-decoration: none;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  color: black;
+  margin: 3px 3px 0px 0px;
+}
+
+.main-nav li {
+  text-align: center;
+  margin: 15px auto;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+}
+
+#chkToggle {
+  display: none;
+}
+
+#chkToggle:checked + ul.main-nav {
+  display: block;
+}
+
+.nav-links:hover{
+  text-decoration: underline;
+  text-decoration-color: #FF0080;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 3px;
+}
+
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 70px;
+    align-items: center;
+  }
+
+  #chkToggle:checked + ul.main-nav {
+    display: flex;
+  }
+
+  .main-nav {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .main-nav li {
+    margin: 0;
+  }
+
+  .nav-links {
+    margin-left: 40px;
+    color:black;
+  }
+
+  .logo {
+    margin-top: 0;
+    color:black;
+  }
+
+  .navbar-toggle {
+    display: none;
+    color: black;
+  }
+
+}

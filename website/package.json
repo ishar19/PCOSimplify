@@ -1,0 +1,27 @@
+{
+  "name": "gdsc",
+  "version": "1.0.0",
+  "description": "A Flutter Application to help people understand and deal with Polycystic Ovary Syndrome (PCOS).",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ishar19/GDSC.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ishar19/GDSC/issues"
+  },
+  "homepage": "https://github.com/ishar19/GDSC#readme",
+  "dependencies": {
+    "htmlincludejs": "^1.0.0"
+  }
+}

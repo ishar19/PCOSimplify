@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../favicon-16x16.png" />
+    <title>NAME</title>
+    <script src="https://unpkg.com/htmlincludejs"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    body {
+      overflow-x: hidden;
+      background: linear-gradient(-60deg, white, #f4acc4);
+    }
+    h1 {
+      text-align: center;
+    }
+    .grid-wrapper {
+      --auto-grid-min-size:12rem;
+      display: grid;
+      grid-gap: 8rem;
+      grid-template-columns: repeat(
+        auto-fill,
+        minmax(var(--auto-grid-min-size), 1fr)
+      );
+      margin: 0 auto 0 auto;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .grid-wrapper li {
+      transition: box-shadow ease-in 100ms;
+      background-color: white;
+      color: black;
+      font-size: 24px;
+      list-style-type: none;
+      padding: 5rem 1rem;
+      text-align: center;
+      text-transform: capitalize;
+      font-weight: 600;
+      width: 25vw;
+      height: 300px;
+      border: 3px solid black;
+      margin: 0 auto 0 auto;
+    }
+    .grid-wrapper li:hover {
+      box-shadow: 3px 5px 3px 5px grey;
+      cursor: pointer;
+    }
+    .main-container {
+      margin: 0 auto;
+      max-width: 1170px;
+      padding: 2rem 1rem;
+    }
+
+    h1,
+    p {
+      text-align: center;
+    }
+
+ 
+  </style>
+
+  <body>
+    <include src="./navbar.html"></include>
+    <h1>Pregnancy</h1>
+    <section>
+      <div class="main-container">
+        <ul class="grid-wrapper">
+          <li>
+            <a href="https://www.healthline.com/health/pregnancy/pcos#risks-for-baby" target="_blank">What You Should Know About Polycystic Ovarian Syndrome (PCOS) and Pregnancy</a>
+          </li>
+          <li><a href="https://www.pregnancybirthbaby.org.au/pcos-and-pregnancy" target="_blank">PCOS and pregnancy</a></li>
+          <li><a href="https://www.nichd.nih.gov/health/topics/pcos/more_information/FAQs/pregnancy">Does PCOS affect pregnancy?</a></li>
+          <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiV0MCRgbz2AhV0meYKHZXoC4wQFnoECEMQAQ&url=https%3A%2F%2Fwww.webmd.com%2Finfertility-and-reproduction%2Fpolycystic-ovary-syndrome-fertility&usg=AOvVaw2Pto4FT8A-oCQGMy0ZPv1p">PCOS and Your Fertility -- and What You Can Do About It </a></li>
+          <li><a href="https://www.youtube.com/watch?v=b5OZc8to2hs">How to get Pregnant | Polycystic Ovary Syndrome (PCOS) | Dr. Smrithi D Nayak - Aster RV Hospital</a></li>
+          <li><a href="https://www.youtube.com/watch?v=SrrWW1LmNAs">How do women with PCOS get pregnant?</a></li>
+          <li><a href="https://www.youtube.com/watch?v=KW6gWv2gOa4">What happens if I have PCOS and I get pregnant? - Dr. Bala R</a></li>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>

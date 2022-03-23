@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../favicon-16x16.png" />
+    <title>NAME</title>
+    <script src="https://unpkg.com/htmlincludejs"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="stories.css">
+  </head>
+  <body>
+   <div>  <nav class="navbar">
+    <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
+            <i class="fa fa-bars"></i>
+        </label>
+    <a href="#" class="logo" style="color: black;">logo</a>
+    <input type="checkbox" id="chkToggle"></input>
+    <ul class="main-nav" id="js-menu">
+      <li>
+        <a href="./index.html" class="nav-links">Home</a>
+      </li>
+      <li>
+        <a href="./explore.html"   class="nav-links">Explore</a>
+      </li>
+      <li>
+        <a href="./diet.html" class="nav-links">Diet</a>
+      </li>
+      <li>
+        <a href="./stories.html" id="current" class="nav-links">Your Stories</a>
+      </li>
+      <li class="signin">
+        <a href="./login.html" class="login nav-links">Login/Register</a>
+      </li>
+      <li class="signout"><a href="#" class=" nav-links">Signout</a></li>
+    </ul>
+  </nav></div>
+    <h1>Share your stories</h1>
+    <section>
+      <div class="main-container">
+        <ul class="grid-wrapper">
+          <li>
+            item 1
+            <p><a class="cta" href="#google">Read More</a></p>
+            <div id="google" class="modaloverlay">
+              <div class="modal">
+                <a href="#close" class="close">&times;</a>
+                <div>
+                  <h1>Story Heading</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Asperiores porro consequatur nulla quae dignissimos ullam
+                    fugiat accusantium recusandae necessitatibus, vero ab
+                    veritatis, explicabo, aperiam a. Repudiandae id laborum
+                    voluptatibus pariatur. Cumque facere incidunt aliquid ab
+                    praesentium laudantium explicabo nam eum delectus tempore
+                    illum magni voluptate, dolor ut nisi quos similique
+                    molestiae sit facilis, eius blanditiis quaerat! Inventore
+                    accusantium minus reiciendis? Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Libero culpa cum neque sed
+                    autem accusamus minus. Maiores voluptatibus nisi dolore
+                    facere aspernatur voluptate consectetur, perferendis non
+                    suscipit, natus ipsa deserunt! Voluptates, magni asperiores
+                    deleniti nisi perspiciatis sunt sed. Esse quis rerum
+                    perspiciatis quidem, officiis reiciendis veniam fugiat
+                    deleniti magni, repellat dolores expedita obcaecati nihil
+                    similique et! Adipisci dolorum beatae nihil? Eos incidunt
+                    provident modi aspernatur ab eveniet voluptatum similique
+                    molestiae optio quis. Dolores in possimus animi veritatis
+                    consequatur vel nemo ut illum deleniti beatae? Nam nihil
+                    rerum veritatis officia at. Facere quisquam hic provident
+                    vitae totam? Rerum hic atque laudantium enim molestias
+                    similique totam ullam vel pariatur tempore quam debitis
+                    cupiditate, excepturi sit deleniti dignissimos saepe,
+                    praesentium officia iure reiciendis? Quis, tempore autem
+                    nisi sunt est alias ad? Totam dicta tempora atque. Non minus
+                    veritatis recusandae optio rem facilis aut temporibus? Saepe
+                    dolore facere iste facilis vitae veniam, hic vel.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>item 2</li>
+          <li>item 3</li>
+          <li>item 4</li>
+          <li>item 5</li>
+          <li>item 6</li>
+          <li>item 7</li>
+          <li>item 8</li>
+          <li>item 9</li>
+          <li>item 10</li>
+          <li>item 11</li>
+          <li>item 12</li>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script type="module">
+  import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.9/firebase-app.js'
+  const firebaseConfig = {
+    apiKey: 'AIzaSyBGPNWZQ0NhfIJZ3AvdU0xp89fte8zfM3s',
+    authDomain: 'gdsc-27141.firebaseapp.com',
+    databaseURL: 'https://gdsc-27141-default-rtdb.firebaseio.com',
+    projectId: 'gdsc-27141',
+    storageBucket: 'gdsc-27141.appspot.com',
+    messagingSenderId: '701196602653',
+    appId: '1:701196602653:web:afc79c572a3929a19fa5f4',
+    measurementId: 'G-755Y8K0P37',
+  }
+  const app = initializeApp(firebaseConfig)
+  import {
+    getDatabase,
+    ref,
+    set,
+    child,
+    get,
+    update,
+    remove,
+  } from 'https://www.gstatic.com/firebasejs/9.6.9/firebase-database.js'
+  const db = getDatabase()
+  const auth = getAuth(app)
+  const user = auth.currentUser
+  import {
+    getAuth,
+    signInWithEmailAndPassword,
+    createUserWithEmailAndPassword,
+    GoogleAuthProvider,
+    signInWithPopup,
+    signOut,
+    onAuthStateChanged,
+    browserSessionPersistence,
+    setPersistence,
+  } from 'https://www.gstatic.com/firebasejs/9.6.9/firebase-auth.js'
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      const uid = user.uid
+      const email = user.email
+      console.log('State chnage')
+      console.log(uid, email)
+      const login = document.querySelector('.login')
+      login.style.display = 'none';
+    } else {
+      console.log('state change')
+      console.log('User is not signed')
+      const signout = document.querySelector('.signout')
+      signout.style.display = 'none';
+    }
+  })  
+  const signout = document.querySelector('.signout')
+  signout.addEventListener('click', function (e) {
+    signOut(auth)
+      .then(() => {
+        // Sign-out successful.
+        console.log(auth.currentUser)
+        console.log('signed out')
+        const login = document.querySelector('.login')
+      login.style.display = 'block';
+      })
+      .catch((error) => {
+        // An error happened.
+      })
+  })   
+</script>

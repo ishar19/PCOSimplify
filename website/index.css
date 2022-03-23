@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: black;
+}
+  body{
+      overflow-x: hidden;
+      background: linear-gradient(60deg, white, #F4ACC4);
+      font-family: Roboto, Helvetica, Arial, sans-serif;
+    }
+    footer{
+      text-align:start;
+      padding-left: 20px;
+      background:rgb(76, 72, 72);
+      color: white;
+    }
+    .footer-link{
+      text-align: left;
+      display: inline-block;
+      font-size: 14px;
+      text-decoration: none;
+      color:white;
+      padding-bottom: 20px;
+      margin-top: 25px;
+    }
+.navbar {
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  font-size: 18px;
+  border: none;
+  padding-bottom: 10px;
+  color: black;
+}
+.main-nav {
+  list-style-type: none;
+  display: none;
+}
+.nav-links,
+.logo {
+  text-decoration: none;
+  color: black;
+  margin: 3px 3px 0px 0px;
+}
+.main-nav li {
+  text-align: center;
+  margin: 15px auto;
+}
+.logo {
+  display: inline-block;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+}
+#chkToggle {
+  display: none;
+}
+#chkToggle:checked + ul.main-nav {
+  display: block;
+}
+#current{
+  text-decoration: underline;
+  text-decoration-color: #FF0080;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 3px;
+}
+.nav-links:hover{
+  text-decoration: underline;
+  text-decoration-color: #FF0080;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 5px;
+}
+@media screen and (min-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 70px;
+    align-items: center;
+  }
+  #chkToggle:checked + ul.main-nav {
+    display: flex;
+  }
+  .main-nav {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .main-nav li {
+    margin: 0;
+  }
+  .nav-links {
+    margin-left: 40px;
+    color:black;
+  }
+  .navbar-toggle {
+    display: none;
+    color: black;
+  }
+
+}
+  #boxes {
+	background-size: 100% 100%;
+	height:auto;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right:auto;
+    padding: 20px;
+}
+img{
+    margin:7px 7px 7px 7px;
+    border-radius:50%;
+    width: 200px;
+    height: 200px;
+    padding-top: 20px;
+    
+}
+.logo{
+  transform: scale(1.4);
+    padding-right:29px;
+    padding-bottom: 30px;
+    margin-top: 0;
+    color:black;
+}
+.img{
+    margin-left: auto;
+    margin-right: auto;
+}
+@media only screen and (max-width: 600px) {
+    #boxes{
+        display: flex;
+        flex-direction: column;
+    }
+    .img{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

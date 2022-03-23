@@ -39,7 +39,7 @@
       transition: box-shadow ease-in 100ms;
       background-color: white;
       color: black;
-      font-size: 24px;
+      font-size: 20px;
       list-style-type: none;
       padding: 5rem 1rem;
       text-align: center;
@@ -49,6 +49,12 @@
       height: 300px;
       border: 3px solid black;
       margin: 0 auto 0 auto;
+    }
+
+    @media (max-width: 768px){
+      .grid-wrapper li{
+        font-size:11px;
+      }
     }
     .grid-wrapper li:hover {
       box-shadow: 3px 5px 3px 5px grey;

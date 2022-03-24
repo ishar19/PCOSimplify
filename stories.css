@@ -144,6 +144,15 @@ h1 {
       border: 3px solid black;
       margin: 0 auto 0 auto;
     }
+     @media (max-width: 768px){
+      .grid-wrapper li{
+        font-size:17px;
+        width: 35vw;      }
+      .cta{
+        font-size: 9px;
+        color: blue;
+      }
+    }
     .grid-wrapper li:hover {
       box-shadow: 3px 5px 3px 5px grey;
     }
@@ -165,11 +174,12 @@ h1 {
       color: black;
       display: inline-block;
       font-family: 'Open Sans', sans-serif;
-      font-size: 1rem;
+      font-size: 0.5rem;
       font-weight: 700;
-      margin-bottom: 1em;
       padding: 0.3em 1em;
       text-decoration: none;
+      position: relative;
+      bottom: -50px;
     }
     .cta:hover {
       background-color: lightgrey;

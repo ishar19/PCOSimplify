@@ -120,7 +120,9 @@
     update,
     remove,
   } from 'https://www.gstatic.com/firebasejs/9.6.9/firebase-database.js'
+  import { collection, doc, setDoc, getFirestore } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-firestore.js"; 
   const db = getDatabase()
+  const storedb = getFirestore(app);
   const auth = getAuth(app)
   const user = auth.currentUser
   // console.log(user)
@@ -167,6 +169,14 @@
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user
+          // console.log(user.email)
+          // console.log(user.uid)
+          // console.log(signupname.value)
+          const nameRef = collection(storedb, "Name");
+          setDoc(doc(nameRef, `${user.uid}`),{
+            id:`${user.uid}`,
+            name:`${signupname.value}`
+          });
           // ...
         })
         .catch((error) => {
@@ -187,9 +197,25 @@
         // This gives you a Google Access Token. You can use it to access the Google API.
         const credential = GoogleAuthProvider.credentialFromResult(result)
         const token = credential.accessToken
+        fetch(`https://www.googleapis.com/oauth2/v3/userinfo?access_token=${token}`).then(function (info) {
+          // const userInfo = JSON.stringify(info)
+          return info.json()
+        }).then(function (body) {
+          const username=body.name;
+           const nameRef = collection(storedb, "Name");
+          setDoc(doc(nameRef, `${user.uid}`),{
+            id:`${user.uid}`,
+            name:`${username}`
+          });
+        }).catch(function (err) {
+          console.log(err);
+          alert("Some error happened, try again")
+        })
         // The signed-in user info.
         const user = result.user
-        console.log(user)
+        console.log(user.email)
+        // console.log(user.uid)
+        // console.log(user.name)
         // ...
       })
       .catch((error) => {
@@ -209,14 +235,14 @@
       // https://firebase.google.com/docs/reference/js/firebase.User
       const uid = user.uid
       const email = user.email
-      console.log("State chnage")
+      console.log('State chnage')
       console.log(uid, email)
       // ...
     } else {
       // User is signed out
       // ...
-      console.log("state change")
-      console.log("User is not signed")
+      console.log('state change')
+      console.log('User is not signed')
     }
   })
   signout.addEventListener('click', function (e) {

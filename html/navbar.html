@@ -1,5 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap');
-* {
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ 
+ <style>
+   @import url('https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap');
+
+ * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -8,45 +13,34 @@
 
 body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
-  background: linear-gradient(45deg,white, #F4ACC4);
 }
 
 .navbar {
   font-size: 18px;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
   border: none;
   padding-bottom: 10px;
   color: black;
 }
-#current{
-  text-decoration: underline;
-  text-decoration-color: #FF0080;
-  text-decoration-thickness: 4px;
-  text-underline-offset: 3px;
-}
+
 .main-nav {
   list-style-type: none;
   display: none;
 }
 
-.nav-links,
-.logo {
+.nav-links{
   text-decoration: none;
-  font-family: 'ZCOOL QingKe HuangYou', cursive;
   color: black;
   margin: 3px 3px 0px 0px;
 }
+
 
 .main-nav li {
   text-align: center;
   margin: 15px auto;
 }
 
-.logo {
-  display: inline-block;
-  font-size: 22px;
-  margin-top: 10px;
-  margin-left: 20px;
-}
+
 
 .navbar-toggle {
   position: absolute;
@@ -66,12 +60,11 @@ body {
 }
 
 .nav-links:hover{
-  text-decoration: underline;
+   text-decoration: underline;
   text-decoration-color: #FF0080;
   text-decoration-thickness: 4px;
-  text-underline-offset: 3px;
+  text-underline-offset: 5px;
 }
-
 
 @media screen and (min-width: 768px) {
   .navbar {
@@ -102,10 +95,7 @@ body {
     color:black;
   }
 
-  .logo {
-    margin-top: 0;
-    color:black;
-  }
+  
 
   .navbar-toggle {
     display: none;
@@ -113,3 +103,34 @@ body {
   }
 
 }
+
+.logo{
+    font-family: 'Satisfy', cursive;
+    font-size: 32px;
+   color: #Ff84ac;
+   margin: 10px 0 0 20px;
+   font-weight: bold;
+}
+
+ </style>
+ 
+ 
+ 
+ <div>  <nav class="navbar">
+    <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
+        <p class="logo">PCOSimplify</p>
+            <i class="fa fa-bars"></i>
+        </label>
+    <input type="checkbox" id="chkToggle"></input>
+    <ul class="main-nav" id="js-menu">
+      <li>
+        <a href="./index.html" id="current" class="nav-links">Home</a>
+      </li>
+      <li>
+        <a href="./explore.html" class="nav-links">Explore</a>
+      </li>
+      <li>
+        <a href="./stories.html" class="nav-links">Your Stories</a>
+      </li>
+    </ul>
+  </nav></div>

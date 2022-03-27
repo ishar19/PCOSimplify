@@ -8,7 +8,6 @@
 
 body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
-  background: linear-gradient(45deg,white, #F4ACC4);
 }
 
 .navbar {
@@ -28,8 +27,8 @@ body {
   display: none;
 }
 
-.nav-links,
-.logo {
+.nav-links
+{
   font-family: 'ZCOOL QingKe HuangYou', cursive;
   text-decoration: none;
   color: black;
@@ -41,12 +40,7 @@ body {
   margin: 15px auto;
 }
 
-.logo {
-  display: inline-block;
-  font-size: 22px;
-  margin-top: 10px;
-  margin-left: 20px;
-}
+
 
 .navbar-toggle {
   position: absolute;
@@ -102,10 +96,13 @@ body {
     color:black;
   }
 
-  .logo {
-    margin-top: 0;
-    color:black;
-  }
+  .logo{
+    font-family: 'Satisfy', cursive;
+    font-size: 32px;
+   color: #Ff84ac;
+   margin: 10px 0 0 20px;
+   font-weight: bold;
+}
 
   .navbar-toggle {
     display: none;
@@ -143,6 +140,8 @@ h1 {
       height: 300px;
       border: 3px solid black;
       margin: 0 auto 0 auto;
+      background: linear-gradient(45deg,white, #F4ACC4);
+
     }
      @media (max-width: 768px){
       .grid-wrapper li{

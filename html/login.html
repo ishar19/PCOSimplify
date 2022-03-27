@@ -150,6 +150,8 @@
         console.log(user)
         console.log(auth.currentUser)
         // ...
+      }).then(function(e){
+        history.go(-1)
       })
       .catch((error) => {
         const errorCode = error.code
@@ -178,6 +180,8 @@
             name:`${signupname.value}`
           });
           // ...
+        }).then(function (){
+          history.go(-1)
         })
         .catch((error) => {
           const errorCode = error.code
@@ -207,7 +211,10 @@
             id:`${user.uid}`,
             name:`${username}`
           });
-        }).catch(function (err) {
+        }).then(function(){
+          history.go(-1)
+        })
+        .catch(function (err) {
           console.log(err);
           alert("Some error happened, try again")
         })
@@ -228,6 +235,7 @@
         const credential = GoogleAuthProvider.credentialFromError(error)
         // ...
       })
+      
   })
   onAuthStateChanged(auth, (user) => {
     if (user) {

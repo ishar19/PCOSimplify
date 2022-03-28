@@ -1,5 +1,14 @@
-<link rel="stylesheet" href="style.css" />
-<div class="form-modal">
+<link rel="stylesheet" href="../styles/login.css" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+</head>
+<body>
+  <div class="form-modal">
   <div class="form-toggle">
     <button id="login-toggle" onclick="toggleLogin()">log in</button>
     <button id="signup-toggle" onclick="toggleSignup()">sign up</button>
@@ -19,7 +28,7 @@
         Login with google
       </button>
 
-      <p><a href="javascript:void(0)">Forgotten account</a></p>
+      <p id="updatePassword">Forgotten account</a></p>
       <hr />
     </form>
   </div>
@@ -56,9 +65,12 @@
     </form>
   </div>
 </div>
-<div>
-  <button class="signout">Signout</button>
-</div>
+
+</body>
+</html>
+
+
+
 <script>
   let email = document.querySelector('.email')
   let password = document.querySelector('.password')
@@ -69,19 +81,18 @@
   const login = document.querySelector('.login')
   const createAccount = document.querySelector('.createAccount')
   const gLogin = document.querySelector('.gLogin')
-  const signout = document.querySelector('.signout')
   function toggleSignup() {
-    document.getElementById('login-toggle').style.backgroundColor = '#fff'
-    document.getElementById('login-toggle').style.color = '#222'
-    document.getElementById('signup-toggle').style.backgroundColor = '#57b846'
-    document.getElementById('signup-toggle').style.color = '#fff'
+    document.getElementById('login-toggle').style.background = '#fff'
+    document.getElementById('login-toggle').style.color = 'black'
+    document.getElementById('signup-toggle').style.background = 'pink'
+    document.getElementById('signup-toggle').style.color = 'black'
     document.getElementById('login-form').style.display = 'none'
     document.getElementById('signup-form').style.display = 'block'
   }
 
   function toggleLogin() {
-    document.getElementById('login-toggle').style.backgroundColor = '#57B846'
-    document.getElementById('login-toggle').style.color = '#fff'
+    document.getElementById('login-toggle').style.backgroundColor = 'pink'
+    document.getElementById('login-toggle').style.color = 'black'
     document.getElementById('signup-toggle').style.backgroundColor = '#fff'
     document.getElementById('signup-toggle').style.color = '#222'
     document.getElementById('signup-form').style.display = 'none'
@@ -130,12 +141,13 @@
     getAuth,
     signInWithEmailAndPassword,
     createUserWithEmailAndPassword,
-    GoogleAuthProvider,
+    GoogleAuthProvider, 
     signInWithPopup,
     signOut,
     onAuthStateChanged,
     browserSessionPersistence,
     setPersistence,
+    sendPasswordResetEmail 
   } from 'https://www.gstatic.com/firebasejs/9.6.9/firebase-auth.js'
   login.addEventListener('click', function (e) {
     e.preventDefault()
@@ -181,6 +193,7 @@
           });
           // ...
         }).then(function (){
+          alert(`LOGGED IN AS ${signupname.value}`);
           history.go(-1)
         })
         .catch((error) => {
@@ -253,15 +266,32 @@
       console.log('User is not signed')
     }
   })
-  signout.addEventListener('click', function (e) {
-    signOut(auth)
-      .then(() => {
-        // Sign-out successful.
-        console.log(auth.currentUser)
-        console.log('signed out')
-      })
-      .catch((error) => {
-        // An error happened.
-      })
+  // signout.addEventListener('click', function (e) {
+  //   signOut(auth)
+  //     .then(() => {
+  //       // Sign-out successful.
+  //       console.log(auth.currentUser)
+  //       console.log('signed out')
+  //     })
+  //     .catch((error) => {
+  //       // An error happened.
+  //     })
+  // })
+    const updatePassword = document.getElementById('updatePassword')
+  updatePassword.addEventListener('click', function (e){
+  let email = prompt('Enter your email address')
+  sendPasswordResetEmail(auth, email)
+  .then(() => {
+    // Password reset email sent!
+    // ..
+  }).then(() => {
+    alert('Password reset email sent')
   })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+  });
+  })
+
 </script>

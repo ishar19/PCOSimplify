@@ -165,13 +165,13 @@ body {
 
 .card-grad--video {
   color: transparent;
-  background: linear-gradient(to right, hsl(91, 96%, 50%), hsl(159, 96%, 50%));
+  background: linear-gradient(0deg, hsl(91, 96%, 50%), hsl(159, 96%, 50%));
   background-clip: text;
 }
 
 .card-grad--shot {
   color: transparent;
-  background: linear-gradient(to right, hsl(294, 96%, 50%), hsl(201, 96%, 50%));
+  background: linear-gradient(0deg, hsl(294, 96%, 50%), hsl(201, 96%, 50%));
   background-clip: text;
 }
 
@@ -222,6 +222,7 @@ body {
 }
 img{
     width: 20vw;
+    min-width: 300px;
    margin: 20px auto 0px auto;
 }
 
@@ -243,4 +244,12 @@ img{
 }
 .btn:hover{
   background-color: #ff44ac;
+}
+
+/*Sticky button*/
+#topbtn{
+  position: fixed;
+  bottom:5px;
+  z-index: 2000;
+  right: 10px;
 }

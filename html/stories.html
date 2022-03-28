@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="../favicon-16x16.png" />
     <title>NAME</title>
-    <script src="https://unpkg.com/htmlincludejs"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,7 +13,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="stories.css">
+  <link rel="stylesheet" href="../styles/stories.css">
   </head>
   <body>
    <div>  <nav class="navbar">
@@ -25,7 +24,7 @@
     <input type="checkbox" id="chkToggle"></input>
     <ul class="main-nav" id="js-menu">
       <li>
-        <a href="./index.html" class="nav-links">Home</a>
+        <a href="../index.html" class="nav-links">Home</a>
       </li>
       <li>
         <a href="./explore.html"   class="nav-links">Explore</a>
@@ -42,14 +41,14 @@
       <li class="signout"><a href="#" class=" nav-links">Signout</a></li>
     </ul>
   </nav></div>
-    <h1>Share your stories</h1>
+    <h1>Share your story</h1>
     <section>
       <div class="main-container">
         <ul class="grid-wrapper">
           <li>
             item 1
-            <p><a class="cta" href="#google">Read More</a></p>
-            <div id="google" class="modaloverlay">
+            <p><a class="cta" href="#item1">Read More</a></p>
+            <div id="item1" class="modaloverlay">
               <div class="modal">
                 <a href="#close" class="close">&times;</a>
                 <div>
@@ -66,6 +65,12 @@
               </div>
             </div>
           </li>
+          <form action="#">
+                    <input autocomplete="off" class="formElement" type="text" id="name" placeholder="name">
+                    <input autocomplete="off" class="formElement" type="text" id="heading" placeholder="heading">
+                    <textarea autocomplete="off" class="formElement" name="" id="body" placeholder="your story"></textarea>
+                    <button id="share">Share</button>
+                  </form>
           <li>item 2</li>
           <li>item 3</li>
           <li>item 4</li>
@@ -100,6 +105,8 @@
     remove,
   } from 'https://www.gstatic.com/firebasejs/9.6.9/firebase-database.js'
   const db = getDatabase()
+   import { collection, doc, setDoc, getFirestore, addDoc, updateDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-firestore.js"; 
+  const storedb = getFirestore(app);
   const auth = getAuth(app)
   const user = auth.currentUser
   import {
@@ -142,4 +149,21 @@
         // An error happened.
       })
   })   
+  const submit = document.getElementById('share')
+  const name = document.getElementById('name').value;
+  const title = document.getElementById('heading').value;
+  const body = document.getElementById('body').value;
+  submit.addEventListener('click',function(e) {
+  var newDocRef = doc(collection(storedb,"stories"));
+  setDoc(newDocRef,{
+    name:`${name}`,
+    body:`${body}`,
+    title:`${title}`,
+    id:newDocRef.id,
+    timestamp:serverTimestamp()
+  }).then(function (result) {
+    alert('story successfully added');
+    window.location.refresh();
+  })
+  })
 </script>

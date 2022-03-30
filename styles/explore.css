@@ -164,15 +164,13 @@ body {
 }
 
 .card-grad--video {
-  color: transparent;
-  background: linear-gradient(0deg, hsl(91, 96%, 50%), hsl(159, 96%, 50%));
-  background-clip: text;
+  color:  hsl(159, 96%, 50%);
+
 }
 
 .card-grad--shot {
-  color: transparent;
-  background: linear-gradient(0deg, hsl(294, 96%, 50%), hsl(201, 96%, 50%));
-  background-clip: text;
+  color: hsl(201, 96%, 50%);
+ 
 }
 
 .card-info>span:last-child {

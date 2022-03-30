@@ -45,37 +45,46 @@
     <section>
       <div class="main-container">
         <ul class="grid-wrapper">
-          <li>
+          <!-- <li>
             item 1
             <p><a class="cta" href="#item1">Read More</a></p>
             <div id="item1" class="modaloverlay">
               <div class="modal">
                 <a href="#close" class="close">&times;</a>
-                <div>
-                  <h1>Story Heading</h1>
-                  <p>
+                <div class="inner">
+                  <h1 class="heading">Story Heading</h1>
+                  <p class="story">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Asperiores porro consequatur nulla quae dignissimos ullam
-                    fugiat accusantium recusandae necessitatibus, vero ab
-                    veritatis, explicabo, aperiam a. Repudiandae id laborum
-                    voluptatibus pariatur. Cumque facere incidunt aliquid ab
-                    praesentium laudantium explicabo nam eum delectus tempore
                   </p>
+                  <h6 class="author">-writer</h6>
                 </div>
               </div>
             </div>
-          </li>
-          <form action="#">
+          </li> -->
+          <!-- <li>item 2
+            <p><a class="cta" href="#item2">Read More</a></p>
+            <div id="item2" class="modaloverlay">
+              <div class="modal">
+                <a href="#close" class="close">&times;</a>
+                <div>
+                  <h1 class="heading">Story Heading</h1>
+                  <p class="story">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </p>
+                  <h6 class="author">-writer</h6>
+                </div>
+              </div>
+            </div>
+          </li> -->
+        </ul>
+      </div>
+      <div class="form">
+        <form action="#">
                     <input autocomplete="off" class="formElement" type="text" id="name" placeholder="name">
                     <input autocomplete="off" class="formElement" type="text" id="heading" placeholder="heading">
-                    <textarea autocomplete="off" class="formElement" name="" id="body" placeholder="your story"></textarea>
+                    <textarea autocomplete="off" class="formElement" name="" rows="" cols="200" id="body" placeholder="your story"></textarea>
                     <button id="share">Share</button>
-                  </form>
-          <li>item 2</li>
-          <li>item 3</li>
-          <li>item 4</li>
-          <li>item 5</li>
-        </ul>
+        </form>
       </div>
     </section>
   </body>
@@ -105,7 +114,7 @@
     remove,
   } from 'https://www.gstatic.com/firebasejs/9.6.9/firebase-database.js'
   const db = getDatabase()
-   import { collection, doc, setDoc, getFirestore, addDoc, updateDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-firestore.js"; 
+   import { collection, doc, setDoc, getFirestore, addDoc, updateDoc, serverTimestamp, getDocs } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-firestore.js"; 
   const storedb = getFirestore(app);
   const auth = getAuth(app)
   const user = auth.currentUser
@@ -150,20 +159,70 @@
       })
   })   
   const submit = document.getElementById('share')
-  const name = document.getElementById('name').value;
-  const title = document.getElementById('heading').value;
-  const body = document.getElementById('body').value;
+  let name = document.getElementById('name');
+  let title = document.getElementById('heading');
+  let body = document.getElementById('body');
   submit.addEventListener('click',function(e) {
+   name = name.value;
+   body = body.value;
+   title = title.value;
   var newDocRef = doc(collection(storedb,"stories"));
+  // console.log(name,body,title);
   setDoc(newDocRef,{
     name:`${name}`,
     body:`${body}`,
     title:`${title}`,
-    id:newDocRef.id,
-    timestamp:serverTimestamp()
+    id:newDocRef.id
   }).then(function (result) {
     alert('story successfully added');
-    window.location.refresh();
+    window.location.reload();
   })
   })
-</script>
+  const querySnapshot =  getDocs(collection(storedb, "stories"));
+  // const story = document.getElementsByClassName('story')
+  const grid = document.querySelector('.grid-wrapper')
+  let num = 0;
+  let count =0;
+  querySnapshot.then(function(doc){
+    doc.forEach((data)=>{
+    let li = document.createElement("li");
+    let p = document.createElement("p");
+    let a = document.createElement("a");
+    a.classList.add('cta');
+    a.setAttribute("href",`#item${num}`)
+    a.innerText ="Read more";
+    p.appendChild(a);
+    li.innerText=data.data().title;
+
+    const storybody = document.createElement("p")
+    const modaloverlay = document.createElement("div")
+    const modal = document.createElement("div");
+    const inner = document.createElement("div")
+    const close = document.createElement("a")
+    const heading = document.createElement("h1")
+    const author = document.createElement("h6")
+    modaloverlay.classList.add('modaloverlay')
+    modaloverlay.setAttribute("id",`item${num}`)
+    modal.classList.add('modal')
+    close.classList.add("close")
+    close.innerHTML ='&times;'
+    close.setAttribute("href","#close")
+    inner.classList.add('inner')
+    heading.classList.add('heading')
+    // heading.innerHTML ="hii"
+    storybody.classList.add('story')
+    // storybody.innerHTML ="hi"
+    author.classList.add('author')
+    author.innerHTML =""
+    modaloverlay.appendChild(modal)
+    modal.append(close,inner)
+    inner.append(heading, storybody, author)
+    li.append(p,modaloverlay)
+    grid.append(li);
+    num+=1;
+    // console.log(data.id, " => ", data.data().body);
+    storybody.innerText=data.data().body;
+    author.innerHTML=data.data().name
+    })
+  })
+</script>   

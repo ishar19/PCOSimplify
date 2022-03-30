@@ -117,6 +117,10 @@ body {
   }
 
 }
+/*done till here*/
+section {
+  display: flex;
+}
 h1,p {
       text-align: center;
     }
@@ -151,20 +155,12 @@ h1,p {
       border-radius: 20px;
 
     }
-     @media (max-width: 768px){
-      .grid-wrapper li{
-        font-size:17px;
-        width: 35vw;      }
-      .cta{
-        font-size: 9px;
-        color: blue;
-      }
-    }
     .grid-wrapper li:hover {
       box-shadow: 3px 5px 3px 5px grey;
     }
     .main-container {
-      margin: 0 auto;
+      margin: 0 10vw 0 5vw;
+      width: 60vw;
       max-width: 1170px;
       padding: 2rem 1rem;
     }
@@ -247,20 +243,28 @@ h1,p {
       z-index: 1;
     }
 
+/*form stylesheet*/
+
     form{
       display: flex;
       flex-direction:column;
-      justify-content:center;
       align-items: center;
       text-align: center;
       box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
       border-radius: 20px;
-
+      margin-right: 20px;
+      margin-top: 5px;
+      height:70vh;
     }
-
+.form{
+  position:fixed;
+  right: 20px;
+   width: 30vw;
+   min-width: 300px;
+}
     .formElement{
       width: 100%;
-      margin: 6px auto;
+      margin: 6px 5px 6px 5px;
       height:3rem;
       border: 2px solid black;
       border-radius:20px;
@@ -277,9 +281,9 @@ h1,p {
       border:2px solid white;
     }
     textarea{
-      min-height:7rem;
       overflow-y: scroll;
       width: 100%;
+      min-height: 19em;
     }
     textarea::placeholder{
       text-align: center;
@@ -298,4 +302,32 @@ h1,p {
       box-shadow: 3px 5px 3px 5px grey;
       background: #Ff84ac;
 
+    }
+
+
+    @media (max-width: 800px){
+      .grid-wrapper li{
+        font-size:17px;
+        width: 70vw;   
+       transform: translateY(100vh);
+       margin:5px auto;
+      }
+      .cta{
+        font-size: 9px;
+        color: blue;
+      }
+      .form{
+        display: block;
+        position:relative;
+        left: -14em;
+      }
+    }
+
+
+    .story{
+      margin-bottom: 7px;
+    }
+    .author{
+      font-size:18px;
+font-family: 'ZCOOL QingKe HuangYou', cursive;
     }

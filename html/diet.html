@@ -4,24 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="../favicon-16x16.png" />
     <title>PCOSimplify</title>
-    <!-- <script src="https://unpkg.com/htmlincludejs"></script> -->
+    <link rel="stylesheet" href="../styles/explore.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../styles/diet.css"/>
   </head>
-</html>
-<body>
-     <div>  <nav class="navbar">
+
+
+  <body>
+    <div><nav id="top" class="navbar">
          <p class="logo">PCOSimplify</p>
     <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
             <i class="fa fa-bars"></i>
@@ -32,10 +27,10 @@
         <a  href="../index.html"  class="nav-links">Home</a>
       </li>
       <li>
-        <a href="./explore.html" class="nav-links">Explore</a>
+        <a href="./explore.html"  class="nav-links">Explore</a>
       </li>
       <li>
-        <a href="./diet.html" id="current" class="nav-links">Diet</a>
+        <a href="./diet.html" id="current"  class="nav-links">Diet</a>
       </li>
       <li>
         <a href="./stories.html" class="nav-links">Your Stories</a>
@@ -47,74 +42,662 @@
         <a href="#" class="nav-links"> Signout</a></li>
     </ul>
   </nav></div>
-<div class="doodle">
-    <figure>
-        <img class="diet-image" src="../images/Diet1.png" alt="" srcset="">
-    </figure>
-</div>
-  <ul class="titles">
-      <li class="diet-link">OVERVIEW</li>
-      <li class="diet-link" >HIGH FIBRE</li>
-      <li class="diet-link" >LEAN PROTEIN</li>
-      <li class="diet-link" >ANTI INFLAMATORY</li>
-      <li class ="diet-link">DASH DIET</li>
-      <li class="diet-link" >LOW FAT</li>
-      <li class ="diet-link">LOW CARBOHYDRATES</li>
-  </ul>
-  <div class="diet-content overview">
-      <div class="content"> <a target="_blank" href="https://www.healthline.com/health/pcos-diet"> Can My Diet Relieve Symptoms of Polycystic Ovary Syndrome (PCOS)?</a></div>
-      <div class="content"> <a target="_blank" href="https://www.instagram.com/pcodecoded/">Recipes and Snacks for POCS by pcodecoded</a> </div>
-      <div class="content"> <a target="_blank" href="https://www.eatright.org/health/pregnancy/fertility-and-reproduction/polycystic-ovarian-syndrome#:~:text=Focusing%20on%20whole%2Dgrains%2C%20fruits,Don%27t%20skip%20meals.">Diet and PCOS</a> </div>
-      <div class="content"> <a target="_blank" href="https://www.unlockfood.ca/en/Articles/Women-s-Health/Nutrition-Tips-for-Polycystic-Ovary-Syndrome-PCOS.aspx">Nutrition Tips for Polycystic Ovary Syndrome (PCOS)</a></div>
-      <div class="content"> <a target="_blank" href="https://www.onpoint-nutrition.com/pcos-diet">PCOS Diet</a></div>
-      <div class="content"> <a target="_blank" href="https://www.medicalnewstoday.com/articles/323002">What to eat if you have PCOS</a> </div>
+
+
+  <!--buttons-->
+    <div class="btns">
+    <button class="btn"><a href="#overview" class="btn-link">Overview</a></button>
+    <button class="btn"><a href="#highfibre" class="btn-link">High Fibre</a></button>
+    <button class="btn"><a href="#leanprotein" class="btn-link">Lean Protein</a></button>
+    <button class="btn"><a href="#antiinflammatory" class="btn-link">Anti Inflammatory</a></button>
+    <button class="btn"><a href="#dashdiet" class="btn-link">Dash Diet</a></button>
+    <button class="btn"><a href="#lowfat" class="btn-link">Low Fat</a></button>
+    <button class="btn"><a href="#lowcarbohydrates" class="btn-link">Low Carbohydrates</a></button>
+    <button id="topbtn" class="btn"><a href="#top">Back to Top</a></button>
   </div>
-  <div class="diet-content high-fibre">
-      <div class="content"><a href="https://www.healthline.com/nutrition/22-high-fiber-foods#TOC_TITLE_HDR_4" target="_blank">22 High Fiber Foods You Should Eat</a></div>
-      <div class="content"><a href="https://gypsyplate.com/cauliflower-peas-masala/" target="_blank">Masala Cauliflower with Green Peas</a></div>
-      <div class="content"><a href="https://biancazapatka.com/en/vegan-keto-bread/" target="_blank">Vegan Almond Bread</a></div>
-      <div class="content"><a href="https://recipes.timesofindia.com/recipes/bajra-and-cauliflower-roti/rs57629039.cms" target="_blank">Bajra and Cauliflower Roti Recipe</a></div>
-      <div class="content"><a href="https://www.tarladalal.com/jowar-and-vegetable-porridge-3544r" target="_blank">Jowar Vegetable Porridge</a></div>
-      <div class="content"><a href="https://www.archanaskitchen.com/jowar-bajra-garlic-roti-recipe" target="_blank">Jowar Bajra Garlic Roti</a></div>
-      <div class="content"><a href="https://www.tarladalal.com/palak-kale-and-apple-juice-kale-spinach-apple-juice-40527r" target="_blank">Palak,Kale and Apple juice</a></div>
-      <div class="content"><a href="https://www.tarladalal.com/whole-wheat-methi-khakhra-822r" target="_blank">Wholewheat, methi khakhra</a></div>
-  </div>
-  <div class="diet-content lean-protein">
-    <div class="content"> <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiBtJPkr9r2AhV963MBHfM5CEgQFnoECB4QAw&url=https%3A%2F%2Fwww.healthline.com%2Fnutrition%2Flean-protein-foods&usg=AOvVaw14Jkg9y03x9NCMmT5FDc11" target="_blank">Top 13 Lean Protein Foods</a></div>
-    <div class="content"> <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwizrdPms9r2AhXIEnAKHQgcBK0QFnoECBgQAw&url=https%3A%2F%2Fwww.foodnetwork.com%2Fhealthy%2Fphotos%2F9-lean-proteins-you-should-be-eating&usg=AOvVaw3tdxNdYt5pza5xbcxKKk15" target="_blank"> 9 Lean Proteins You Should Be Eating</a></div>
-    <div class="content"> <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwizrdPms9r2AhXIEnAKHQgcBK0QFnoECA8QAw&url=https%3A%2F%2Fwww.tarladalal.com%2Farticle-protein-rich-vegetarian-indian-foods-221&usg=AOvVaw2xaG0CpRv0chzUEegHMeF6" target="_blank">List of protein rich vegan food </a></div>
-    <div class="content"> <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwivsPCCsdr2AhUq-2EKHd4iARIQFnoECAgQAQ&url=https%3A%2F%2Fwww.loveandlemons.com%2Fhow-to-cook-tofu%2F&usg=AOvVaw2lGOknIn4BFNfMqu3HQb2a" target="_blank">Tofu Recipies</a></div>
-    <div class="content"> <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiHt4yBs9r2AhUBCN4KHekpDrIQFnoECAgQAQ&url=https%3A%2F%2Fthemodernproper.com%2Fturkey-quinoa-meatloaf&usg=AOvVaw0bJH2btuP-zvWC-fAitPa7" target="_blank">Turkey and Quinoa meatloaf Recipies</a></div>
-    <div class="content"> <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjctcS-s9r2AhXG3mEKHaHpAnkQFnoECAsQAQ&url=https%3A%2F%2Fwww.feastingathome.com%2Fbrazilian-fish-stew-aka-moqueca%2F&usg=AOvVaw3Y0EG3SWrL7izpDT88G7e7" target="_blank">Brazilian Fish Stew Recipies</a></div>
-    <div class="content"> <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwii7rmnt9r2AhXrQPUHHXlKBCsQFnoECA0QAQ&url=https%3A%2F%2Fwww.foodandwine.com%2Frecipes%2Fturmeric-chicken-stew&usg=AOvVaw16SO9x__KE672wiqJeaIoR" target="_blank">Turmeric chicken stew Recipies </a></div>
-    <div class="content"> <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwillNybuNr2AhWBbN4KHR22C5QQFnoECB0QAw&url=https%3A%2F%2Ftimesofindia.indiatimes.com%2Flife-style%2Ffood-news%2F10-types-of-protein-rich-indian-dals-and-their-benefits%2Fphotostory%2F88505811.cms&usg=AOvVaw0wD-qNnduvBxUirLK44kDX" target="_blank">Pulses Recipies</a></div>
-  </div>
-  <div class="diet-content anti-inf">
-    <div class="content"><a href="https://www.healthline.com/nutrition/13-anti-inflammatory-foods" target="_blank">13 of the Most Anti-Inflammatory Foods You Can Eat</a></div>
-    <div class="content"><a href="https://www.healthline.com/health/rheumatoid-arthritis/seven-day-meal-plan" target="_blank">Your 7-Day Meal Plan for RA: Anti-Inflammatory Recipes</a></div>
-    <div class="content"><a href="https://www.asweetpeachef.com/anti-inflammatory-diet-meal-plan/" target="_blank">5-Day Anti-Inflammatory Diet Meal Plan</a></div>
-    <div class="content"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjtu77ruNr2AhXQ-WEKHRkaCAsQFnoECBwQAQ&url=https%3A%2F%2Fwww.medicalnewstoday.com%2Farticles%2F322897&usg=AOvVaw2UbSzzbBFd52nQ87tGsaAN" target="_blank">Anti-inflammatory meal plan: 26 recipes to try</a></div>
-    <div class="content"><a href="https://tasty.co/article/michelleno/18-anti-inflammatory-recipes-that-will-make-you-feel-better" target="_blank">18 Anti-Inflammatory Recipes That Are Worth Trying</a></div>
-    <div class="content"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi94fP5u9r2AhXbP3AKHbaLClQQFnoECAcQAQ&url=https%3A%2F%2Fwww.verywellhealth.com%2Fanti-inflammatory-diet-benefits-women-with-pcos-2616296&usg=AOvVaw2o9kZxEAmVUklr0WbQpHFL" target="_blank">Anti-Inflammatory Diet Benefits for PCOS</a></div>
-  </div>
-  <div class="diet-content dash-diet">
-    <div class="content"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjl5-6Svdr2AhVMEYgKHfdWBZYQFnoECA4QAw&url=https%3A%2F%2Fwww.mayoclinic.org%2Fhealthy-lifestyle%2Fnutrition-and-healthy-eating%2Fin-depth%2Fdash-diet%2Fart-20045913&usg=AOvVaw1hLxJQra_5eB0rLaV5EXst" target="_blank">All about Dash Diet</a></div>
-    <div class="content"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiCg86Yvtr2AhVMA94KHSDwCFAQFnoECAsQAQ&url=https%3A%2F%2Fwww.verywellhealth.com%2Freasons-why-the-dash-diet-is-good-for-pcos-2616288&usg=AOvVaw2tUfDyAeN9BhdQHjSrTUe5" target="_blank">Why the dash diet is good for pcos</a></div>
-  </div>
-  <div class="diet-content low-fat">
-    <div class="content"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiWjNTOvtr2AhVMCt4KHemCCc4QFnoECAgQAw&url=https%3A%2F%2Fwww.healthline.com%2Fnutrition%2Fhealthy-low-fat-foods&usg=AOvVaw1FuYqOPTx3s2oq8hxyR-R7"target="_blank">13 Low-Fat Foods That Are Good For Your Health</a></div>
-    <div class="content"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiWjNTOvtr2AhVMCt4KHemCCc4QFnoECA0QAQ&url=https%3A%2F%2Fwww.medicalnewstoday.com%2Farticles%2F325860&usg=AOvVaw1PwvGLBgTe-arZ9Dxh0cno"target="_blank">A guide to low fat foods</a></div>
-    <div class="content"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiQ1f_tv9r2AhWKMN4KHcioDdQQFnoECDYQAQ&url=https%3A%2F%2Fwww.singlecare.com%2Fblog%2Fpcos-diet%2F&usg=AOvVaw0s53KC9tXDDdt4maI43fIC"target="_blank">What is the best diet for PCOS?</a></div>
-    <div class="content"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiQ1f_tv9r2AhWKMN4KHcioDdQQFnoECDcQAQ&url=https%3A%2F%2Fwww.tarladalal.com%2Frecipes-for-pcos-weight-loss-1042&usg=AOvVaw2mlaPQzPklsUzTfh-Yic7Z"target="_blank">PCOS weight loss recipes</a></div>
-    <div class="content"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiQ1f_tv9r2AhWKMN4KHcioDdQQFnoECAwQAQ&url=https%3A%2F%2Fwww.healthline.com%2Fnutrition%2Fhow-to-lose-weight-with-pcos&usg=AOvVaw1cXfW7jUel77PeJo7OC-H-"target="_blank">How to Lose Weight With PCOS: 13 Helpful Tips</a></div>
-  </div>
-  <div class="diet-content low-starch">
-    <div class="content"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiJ4_zMwdr2AhXp73MBHY-kCSEQFnoECBEQAw&url=https%3A%2F%2Fwww.webmd.com%2Fankylosing-spondylitis%2Fguide%2Flow-starch-diet-for-ankylosing-spondylitis&usg=AOvVaw2zW4D4pVndQfPBfDZ6c1BE" target="_blank">Low starch food list </a></div>
-    <div class="content"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiJ4_zMwdr2AhXp73MBHY-kCSEQFnoECAYQAQ&url=https%3A%2F%2Fwww.livestrong.com%2Farticle%2F315391-list-of-foods-with-no-starch-or-sugar%2F&usg=AOvVaw3S7EwENr3GHsEBeU3OehTl" target="_blank">A List of Non-Starchy Foods to Eat On a Starch-Free Diet </a></div>
-    <div class="content"><a href="https://www.verywellhealth.com/all-about-carbohydrates-2616475" target="_blank">Carbohydrates and Their Role in Nutrition for PCOS </a></div>
-    <div class="content"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjgl6bzwdr2AhUKD94KHaQFCGoQFnoECCwQAQ&url=https%3A%2F%2Fconsultqd.clevelandclinic.org%2Freducing-pcos-symptoms-with-a-low-carb-diet%2F&usg=AOvVaw1CGIxZDw8-w8P7IBme_jDs" target="_blank">Reducing PCOS Symptoms With a Low-Carb Diet</a></div>
-  </div>
+    <div id="top"></div>
+    <div id="overview" class="text">Overview</div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>Healthline</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.healthline.com/health/pcos-diet"
+            target="_blank"
+          >
+             Can My Diet Relieve Symptoms of PCOS?
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Shot</span>
+          <span>pcodecoded</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.instagram.com/pcodecoded"
+            target="_blank"
+          >
+            Recipes and Snacks for POCS by pcodecoded
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>Eatright</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.eatright.org/health/pregnancy/fertility-and-reproduction/polycystic-ovarian-syndrome#:~:text=Focusing%20on%20whole-grains,%20fruits,Don't%20skip%20meals."
+            target="_blank"
+          >
+           Diet and PCOS
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>unlockfood</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.unlockfood.ca/en/Articles/Women-s-Health/Nutrition-Tips-for-Polycystic-Ovary-Syndrome-PCOS.aspx"
+            target="_blank"
+          >
+           Nutrition Tips for Polycystic Ovary Syndrome (PCOS)
+          </a>
+        </div>
+      </div>
+       <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>onpoint-nutrition</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.onpoint-nutrition.com/pcos-diet"
+            target="_blank"
+          >
+          PCOS Diet
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>medicalnewstoday</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.medicalnewstoday.com/articles/323002"
+            target="_blank"
+          >
+          What to eat if you have PCOS
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="highfibre" class="text">High Fibre</div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>Healthline</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.healthline.com/nutrition/22-high-fiber-foods#TOC_TITLE_HDR_4"
+            target="_blank"
+          >
+            22 High Fiber Foods You Should Eat
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>Gypsy plate</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://gypsyplate.com/cauliflower-peas-masala/"
+            target="_blank"
+          >
+            Masala Cauliflower with Green Peas
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>biancazapatka</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://biancazapatka.com/en/vegan-keto-bread/"
+            target="_blank"
+          >
+           Vegan Almond Bread
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>TOI</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://recipes.timesofindia.com/recipes/bajra-and-cauliflower-roti/rs57629039.cms"
+            target="_blank"
+          >
+           Bajra and Cauliflower Roti Recipe
+          </a>
+        </div>
+      </div>
+       <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>tarladalal</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.tarladalal.com/jowar-and-vegetable-porridge-3544r"
+            target="_blank"
+          >
+          Jowar Vegetable Porridge
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>archanaskitchen</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.archanaskitchen.com/jowar-bajra-garlic-roti-recipe"
+            target="_blank"
+          >
+          Jowar Bajra Garlic Roti
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>tarladalal</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.tarladalal.com/palak-kale-and-apple-juice-kale-spinach-apple-juice-40527r"
+            target="_blank"
+          >
+         Palak,Kale and Apple juice
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>tarladalal</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.tarladalal.com/whole-wheat-methi-khakhra-822r"
+            target="_blank"
+          >
+         Wholewheat, methi khakhra
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="leanprotein" class="text">Lean Protein</div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>Healthline</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.healthline.com/nutrition/lean-protein-foods"
+            target="_blank"
+          >
+            Top 13 Lean Protein Foods
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Shot</span>
+          <span>foodnetwork</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.foodnetwork.com/healthy/photos/9-lean-proteins-you-should-be-eating"
+            target="_blank"
+          >
+            9 Lean Proteins You Should Be Eating
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>tarladalal</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.tarladalal.com/article-protein-rich-vegetarian-indian-foods-221"
+            target="_blank"
+          >
+           List of protein rich vegan food
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>loveandlemons</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.loveandlemons.com/how-to-cook-tofu/"
+            target="_blank"
+          >
+            Tofu Recipe
+        </a>
+        </div>
+      </div>
+       <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>themodernproper</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://themodernproper.com/turkey-quinoa-meatloaf"
+            target="_blank"
+          >
+          Turkey Quinoa meatloaf recipe
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>feastingathome</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.feastingathome.com/brazilian-fish-stew-aka-moqueca/"
+            target="_blank"
+          >
+          Brazilian Fish stew recipe
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>feastingathome</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://timesofindia.indiatimes.com/life-style/food-news/10-types-of-protein-rich-indian-dals-and-their-benefits/photostory/88505811.cms"
+            target="_blank"
+          >
+          Pulses Recipies
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="antiinflammatory" class="text">Anti Inflammatory</div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>Healthline</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.healthline.com/health/rheumatoid-arthritis/seven-day-meal-plan"
+            target="_blank"
+          >
+            13 of the Most Anti-Inflammatory Foods You Can Eat
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Shot</span>
+          <span>healthline</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.healthline.com/health/rheumatoid-arthritis/seven-day-meal-plan"
+            target="_blank"
+          >
+            Your 7-Day Meal Plan for RA: Anti-Inflammatory Recipes
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>asweetpeachef</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.asweetpeachef.com/anti-inflammatory-diet-meal-plan/"
+            target="_blank"
+          >
+          5-Day Anti-Inflammatory Diet Meal Plan
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>unlockfood</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.unlockfood.ca/en/Articles/Women-s-Health/Nutrition-Tips-for-Polycystic-Ovary-Syndrome-PCOS.aspx"
+            target="_blank"
+          >
+           Nutrition Tips for Polycystic Ovary Syndrome (PCOS)
+          </a>
+        </div>
+      </div>
+       <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>medicalnewstoday</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.medicalnewstoday.com/articles/322897"
+            target="_blank"
+          >
+          Anti-inflammatory meal plan: 26 recipes to try
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>medicalnewstoday</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://tasty.co/article/michelleno/18-anti-inflammatory-recipes-that-will-make-you-feel-better"
+            target="_blank"
+          >
+         18 Anti-Inflammatory Recipes That Are Worth Trying
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>verywellhealth.com</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.verywellhealth.com/anti-inflammatory-diet-benefits-women-with-pcos-2616296"
+            target="_blank"
+          >
+            Anti-Inflammatory Diet Benefits for PCOS
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="dashdiet" class="text">Dash Diet</div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Shot</span>
+          <span>mayoclinic</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/dash-diet/art-20045913"
+            target="_blank"
+          >
+           All about Dash Diet
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>Eatright</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.verywellhealth.com/reasons-why-the-dash-diet-is-good-for-pcos-2616288"
+            target="_blank"
+          >
+          Why the dash diet is good for pcos
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="lowfat" class="text">Low Fat</div>
+     <div class="cards">
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>Healthline</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.healthline.com/nutrition/healthy-low-fat-foods"
+            target="_blank"
+          >
+            13 Low-Fat Foods That Are Good For Your Health
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Shot</span>
+          <span>medicalnewstoday</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.medicalnewstoday.com/articles/325860"
+            target="_blank"
+          >
+            A guide to low fat foods
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>Eatright</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.singlecare.com/blog/pcos-diet/"
+            target="_blank"
+          >
+           What is the best diet for PCOS?
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>tarladalal</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.tarladalal.com/recipes-for-pcos-weight-loss-1042"
+            target="_blank"
+          >
+          What is the best diet for PCOS?
+          </a>
+        </div>
+      </div>
+       <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>tarladalal</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.tarladalal.com/recipes-for-pcos-weight-loss-1042"
+            target="_blank"
+          >
+          PCOS weight loss recipes
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>healthline</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.healthline.com/nutrition/how-to-lose-weight-with-pcos"
+            target="_blank"
+          >
+            How to Lose Weight With PCOS
+          </a>
+        </div>
+      </div>
+    </div>
+     <div id="lowcarbohydrates" class="text">Low Carbohydrates</div>
+     <div class="cards">
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>webmd</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.webmd.com/ankylosing-spondylitis/guide/low-starch-diet-for-ankylosing-spondylitis"
+            target="_blank"
+          >
+            Low starch food list
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Shot</span>
+          <span>livestrong</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.livestrong.com/article/315391-list-of-foods-with-no-starch-or-sugar/"
+            target="_blank"
+          >
+           A List of Non-Starchy Foods to Eat On a Starch-Free Diet
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>verywellhealth.com</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://www.verywellhealth.com/all-about-carbohydrates-2616475"
+            target="_blank"
+          >
+          Carbohydrates and Their Role in Nutrition for PCOS
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--shot">Article</span>
+          <span>consultqd</span>
+        </div>
+
+        <div class="card-heading">
+          <a
+            href="https://consultqd.clevelandclinic.org/reducing-pcos-symptoms-with-a-low-carb-diet/"
+            target="_blank"
+          >
+          Reducing PCOS Symptoms With a Low-Carb Diet
+          </a>
+        </div>
+      </div>
+    </div>
 </body>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 <script type="module">
@@ -140,6 +723,8 @@
     remove,
   } from 'https://www.gstatic.com/firebasejs/9.6.9/firebase-database.js'
   const db = getDatabase()
+   import { collection, doc, setDoc, getFirestore, addDoc, updateDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-firestore.js"; 
+  const storedb = getFirestore(app);
   const auth = getAuth(app)
   const user = auth.currentUser
   import {
@@ -181,104 +766,22 @@
       .catch((error) => {
         // An error happened.
       })
+  })   
+  const submit = document.getElementById('share')
+  const name = document.getElementById('name').value;
+  const title = document.getElementById('heading').value;
+  const body = document.getElementById('body').value;
+  submit.addEventListener('click',function(e) {
+  var newDocRef = doc(collection(storedb,"stories"));
+  setDoc(newDocRef,{
+    name:`${name}`,
+    body:`${body}`,
+    title:`${title}`,
+    id:newDocRef.id,
+    timestamp:serverTimestamp()
+  }).then(function (result) {
+    alert('story successfully added');
+    window.location.refresh();
   })
-</script>
-
-<script>
-    const links = document.getElementsByClassName('diet-link')
-    // console.log(links)
-    links[0].classList.add('selected')
-    for (const link of links){
-        link.addEventListener('click', function (e){
-            for(const tags of links){
-                if(tags.getAttribute('class')=='diet-link selected'){
-                tags.classList.remove('selected')
-            }
-            }
-            if(link.getAttribute('class')=='diet-link selected'){
-                link.classList.remove('selected')
-            }
-            else(link.classList.add('selected'))
-
-        if(links[1].getAttribute('class')=='diet-link selected'){
-        console.log('no')
-        const high_fibre= document.querySelector('.high-fibre')
-        const all = document.getElementsByClassName('diet-content')
-        console.log(all)
-        for(const each of all){
-            each.style.display = 'none';
-        }
-        high_fibre.style.display="block"
-        }
-        if(links[2].getAttribute('class')=='diet-link selected'){
-        console.log('no')
-        const lean_protein= document.querySelector('.lean-protein');
-        const all = document.getElementsByClassName('diet-content')
-        console.log(all)
-        for(const each of all){
-            each.style.display = 'none';
-        }
-        lean_protein.style.display="block"
-        }
-        if(links[0].getAttribute('class')=='diet-link selected'){
-        console.log('yes')
-        const overview= document.querySelector('.overview')
-        const all = document.getElementsByClassName('diet-content')
-        console.log(all)
-        for(const each of all){
-            each.style.display = 'none';
-        }
-        console.log(overview)
-        overview.style.display="block"
-}
-        if(links[3].getAttribute('class')=='diet-link selected'){
-        console.log('no')
-        const anti_inf= document.querySelector('.anti-inf');
-        const all = document.getElementsByClassName('diet-content')
-        console.log(all)
-        for(const each of all){
-            each.style.display = 'none';
-        }
-        anti_inf.style.display="block"
-        }
-        if(links[4].getAttribute('class')=='diet-link selected'){
-        console.log('no')
-        const dash= document.querySelector('.dash-diet');
-        const all = document.getElementsByClassName('diet-content')
-        console.log(all)
-        for(const each of all){
-            each.style.display = 'none';
-        }
-        dash.style.display="block"
-        }
-        if(links[5].getAttribute('class')=='diet-link selected'){
-        console.log('no')
-        const low_fat= document.querySelector('.low-fat');
-        const all = document.getElementsByClassName('diet-content')
-        console.log(all)
-        for(const each of all){
-            each.style.display = 'none';
-        }
-        low_fat.style.display="block"
-        }
-        if(links[6].getAttribute('class')=='diet-link selected'){
-        console.log('no')
-        const low_starch= document.querySelector('.low-starch');
-        const all = document.getElementsByClassName('diet-content')
-        console.log(all)
-        for(const each of all){
-            each.style.display = 'none';
-        }
-        low_starch.style.display="block"
-        }
-
-})
-
-    if(links[0].getAttribute('class')=='diet-link selected'){
-        console.log('yes')
-        const overview= document.querySelector('.overview')
-        console.log(overview)
-        overview.style.display="block"
-}
-    }
+  })
 </script>

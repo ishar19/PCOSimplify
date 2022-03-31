@@ -3,8 +3,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  color: black;
-}
+ }
 
 body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
@@ -14,7 +13,9 @@ body {
   font-size: 18px;
   border: none;
   padding-bottom: 10px;
-  color: black;
+  color: white;
+  background-color: #1E233C;
+  margin-top :-11px;
 }
 #current{
   text-decoration: underline;
@@ -31,7 +32,7 @@ body {
 {
   font-family: 'ZCOOL QingKe HuangYou', cursive;
   text-decoration: none;
-  color: black;
+  color: white;
   margin: 3px 3px 0px 0px;
 }
 
@@ -81,6 +82,7 @@ body {
     padding-bottom: 0;
     height: 70px;
     align-items: center;
+    margin-top: -11px;
   }
 
   #chkToggle:checked + ul.main-nav {
@@ -100,7 +102,7 @@ body {
 
   .nav-links {
     margin-left: 40px;
-    color:black;
+    color:white;
   }
 
   .logo{
@@ -151,7 +153,7 @@ h1,p {
       height: 300px;
       border: 3px solid black;
       margin: 0 auto 0 auto;
-      background: linear-gradient(45deg,white, #F4ACC4);
+      background: #D4F4F6;
       border-radius: 20px;
 
     }
@@ -331,3 +333,17 @@ h1,p {
       font-size:18px;
 font-family: 'ZCOOL QingKe HuangYou', cursive;
     }
+
+
+  footer{
+  background-color: #1E233C;
+  height:80px;
+  text-align: center;
+  color: white;
+    padding-top: 30px;
+    margin-bottom: 0px;
+
+}
+footer a{
+  color: white;
+}

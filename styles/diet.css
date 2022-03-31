@@ -7,7 +7,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  color: black;
+  /* color: black; */
 }
 html{
   scroll-behavior:smooth;
@@ -47,7 +47,7 @@ body {
 }
 .navbar-toggle {
   position: absolute;
-  top: 10px;
+  top: 4px;
   right: 20px;
   cursor: pointer;
   color: rgba(121, 22, 22, 0.8);
@@ -98,6 +98,7 @@ body {
   .navbar-toggle {
     display: none;
     color: black;
+    margin-top:7px;
   }
 
 }
@@ -138,7 +139,7 @@ body {
     margin-bottom: 5px;
   transition: all .3s;
   position: relative;
-    background: linear-gradient(60deg, white,#ff84ac);
+    background-color:#FFD3E1;
 
 }
 .card:first-child {
@@ -228,6 +229,7 @@ img{
 }
 .btn a{
   text-decoration: none;
+  color: black;
 }
 .btn{
   height: 4em;
@@ -249,4 +251,21 @@ img{
   bottom:5px;
   z-index: 2000;
   right: 10px;
+}
+
+
+
+
+footer{
+  background-color: #1E233C;
+  height:80px;
+  text-align: center;
+  color: white;
+    padding-top: 20px;
+        margin-bottom: 0px;
+
+
+}
+footer a{
+  color: white;
 }

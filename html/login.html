@@ -24,7 +24,7 @@
         required
       />
       <button type="button" class="btn login">login</button>
-      <button type="button" class="btn gLogin">
+      <button style="color: black;" type="button" class="btn gLogin">
         Login with google
       </button>
 
@@ -58,7 +58,7 @@
       <button class="createAccount btn signup" type="button">
         create account
       </button>
-      <button type="button" class="btn google-plus-signup">
+      <button style="color:black" type="button" class="btn google-plus-signup">
         Signup with google
       </button>
       <hr />
@@ -84,15 +84,15 @@
   function toggleSignup() {
     document.getElementById('login-toggle').style.background = '#fff'
     document.getElementById('login-toggle').style.color = 'black'
-    document.getElementById('signup-toggle').style.background = 'pink'
-    document.getElementById('signup-toggle').style.color = 'black'
+    document.getElementById('signup-toggle').style.background = ' #1E233C'
+    document.getElementById('signup-toggle').style.color = 'white'
     document.getElementById('login-form').style.display = 'none'
     document.getElementById('signup-form').style.display = 'block'
   }
 
   function toggleLogin() {
-    document.getElementById('login-toggle').style.backgroundColor = 'pink'
-    document.getElementById('login-toggle').style.color = 'black'
+    document.getElementById('login-toggle').style.backgroundColor = ' #1E233C'
+    document.getElementById('login-toggle').style.color = 'white'
     document.getElementById('signup-toggle').style.backgroundColor = '#fff'
     document.getElementById('signup-toggle').style.color = '#222'
     document.getElementById('signup-form').style.display = 'none'
@@ -208,7 +208,7 @@
   })
   const provider = new GoogleAuthProvider()
   gLogin.addEventListener('click', function (e) {
-    alert('gogoel')
+    // alert('gogoel')
     signInWithPopup(auth, provider)
       .then((result) => {
         // This gives you a Google Access Token. You can use it to access the Google API.

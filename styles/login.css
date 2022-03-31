@@ -50,13 +50,13 @@
 
   .form-modal .login,
   .form-modal .signup {
-    background: linear-gradient(45deg,white, #F4ACC4);
+    background: #1E233C;
     color: #fff;
   }
 
   .form-modal .login:hover,
   .form-modal .signup:hover {
-    background:  #Ff84ac;
+    background:   #1E233C;
   }
 
   .form-toggle {
@@ -87,8 +87,8 @@
   }
 
   #login-toggle {
-      background: linear-gradient(45deg,white, #F4ACC4);
-    color: black;
+      background: #1E233C;
+    color: white;
   }
 
   .form-modal form {
@@ -116,7 +116,7 @@
     width: 100%;
     margin-top: 0.5em;
     padding: 0.6em;
-    color:black;
+    color:white;
   }
 
   .form-modal input {

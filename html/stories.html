@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="../favicon-16x16.png" />
-    <title>NAME</title>
+    <title>PCOSimplify</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,7 +19,7 @@
    <div>  <nav class="navbar">
       <p class="logo">PCOSimplify</p>
     <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
-            <i class="fa fa-bars"></i>
+            <i style="color:white" class="fa fa-bars"></i>
         </label>
     <input type="checkbox" id="chkToggle"></input>
     <ul class="main-nav" id="js-menu">
@@ -87,6 +87,9 @@
         </form>
       </div>
     </section>
+    <footer>
+    <h4>Mail us @<a href="mailto:pcosimplify@gmail.com">PCOSimplify team</a></h4>
+  </footer>
   </body>
 </html>
 
@@ -216,13 +219,14 @@
     author.innerHTML =""
     modaloverlay.appendChild(modal)
     modal.append(close,inner)
-    inner.append(heading, storybody, author)
+    inner.append(heading, author, storybody)
     li.append(p,modaloverlay)
     grid.append(li);
     num+=1;
     // console.log(data.id, " => ", data.data().body);
+    author.innerHTML="by "+"-"+" "+data.data().name
     storybody.innerText=data.data().body;
-    author.innerHTML=data.data().name
+    
     })
   })
 </script>   

@@ -175,7 +175,8 @@
     name:`${name}`,
     body:`${body}`,
     title:`${title}`,
-    id:newDocRef.id
+    id:newDocRef.id,
+    timestamp:serverTimestamp()
   }).then(function (result) {
     alert('story successfully added');
     window.location.reload();

@@ -262,6 +262,7 @@ div#slider figure {
     flex-direction:row;
     align-items: center;
     justify-content:center;
+    margin-bottom: 30px;
 }
 .doodle-box .box img{
     width:30vw;

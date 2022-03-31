@@ -134,7 +134,7 @@ h1,p {
     .grid-wrapper {
       --auto-grid-min-size:12rem;
       display: grid;
-      grid-gap: 3rem 8rem;
+      grid-gap: 3rem 4rem;
       grid-template-columns: repeat(
         auto-fill,
         minmax(var(--auto-grid-min-size), 1fr)
@@ -154,7 +154,7 @@ h1,p {
       text-align: center;
       text-transform: capitalize;
       font-weight: 600;
-      width: 25vw;
+      width: 15vw;
       height: 300px;
       border: 3px solid black;
       margin: 0 auto 0 auto;

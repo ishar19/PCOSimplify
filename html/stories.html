@@ -61,21 +61,6 @@
               </div>
             </div>
           </li> -->
-          <!-- <li>item 2
-            <p><a class="cta" href="#item2">Read More</a></p>
-            <div id="item2" class="modaloverlay">
-              <div class="modal">
-                <a href="#close" class="close">&times;</a>
-                <div>
-                  <h1 class="heading">Story Heading</h1>
-                  <p class="story">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </p>
-                  <h6 class="author">-writer</h6>
-                </div>
-              </div>
-            </div>
-          </li> -->
         </ul>
       </div>
       <div class="form">
@@ -193,8 +178,9 @@
     let p = document.createElement("p");
     let a = document.createElement("a");
     a.classList.add('cta');
+    p.classList.add('p-cta')
     a.setAttribute("href",`#item${num}`)
-    a.innerText ="Read more";
+    a.innerText ="Read more about it";
     p.appendChild(a);
     li.innerText=data.data().title;
 

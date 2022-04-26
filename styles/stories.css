@@ -9,6 +9,7 @@
 
 body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
+  overflow-x: none;
 }
 
 .navbar {
@@ -342,18 +343,3 @@ h1,p {
       font-size:18px;
 font-family: 'ZCOOL QingKe HuangYou', cursive;
     }
-
-
-  footer{
-  background-color: #1E233C;
-  height:80px;
-  text-align: center;
-  color: white;
-    padding-top: 30px;
-    margin-bottom: 0px;
-
-}
-footer a{
-  color: white;
-  font-family: 'ZCOOL QingKe HuangYou', cursive;
-}

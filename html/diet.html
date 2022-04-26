@@ -32,48 +32,12 @@
       <li>
         <a href="./diet.html" id="current"  class="nav-links">Diet</a>
       </li>
-      <li>
-        <a href="./stories.html" class="nav-links">Your Stories</a>
-      </li>
-      <li>
-        <a href="./login.html" class="login nav-links">Login/Register</a>
-      </li>
-      <li class="signout">
-        <a href="#" class="nav-links"> Signout</a></li>
     </ul>
   </nav></div>
 
 
-<!-- <ul class="nav">
-  <li class="button-dropdown">
-    <a href="javascript:void(0)" class="dropdown-toggle">
-      Dropdown 1 <span>▼</span>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="#">
-          Drop Item 1
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          Drop Item 2
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          Drop Item 3
-        </a>
-      </li>
-    </ul>
-  </li>
-</ul>
-
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
- -->
-
-
   <!--buttons-->
     <div class="btns">
     <button class="btn"><a href="#overview" class="btn-link">Overview</a></button>
@@ -734,88 +698,3 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-<script type="module">
-  import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.9/firebase-app.js'
-  const firebaseConfig = {
-    apiKey: 'AIzaSyBGPNWZQ0NhfIJZ3AvdU0xp89fte8zfM3s',
-    authDomain: 'gdsc-27141.firebaseapp.com',
-    databaseURL: 'https://gdsc-27141-default-rtdb.firebaseio.com',
-    projectId: 'gdsc-27141',
-    storageBucket: 'gdsc-27141.appspot.com',
-    messagingSenderId: '701196602653',
-    appId: '1:701196602653:web:afc79c572a3929a19fa5f4',
-    measurementId: 'G-755Y8K0P37',
-  }
-  const app = initializeApp(firebaseConfig)
-  import {
-    getDatabase,
-    ref,
-    set,
-    child,
-    get,
-    update,
-    remove,
-  } from 'https://www.gstatic.com/firebasejs/9.6.9/firebase-database.js'
-  const db = getDatabase()
-   import { collection, doc, setDoc, getFirestore, addDoc, updateDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-firestore.js"; 
-  const storedb = getFirestore(app);
-  const auth = getAuth(app)
-  const user = auth.currentUser
-  import {
-    getAuth,
-    signInWithEmailAndPassword,
-    createUserWithEmailAndPassword,
-    GoogleAuthProvider,
-    signInWithPopup,
-    signOut,
-    onAuthStateChanged,
-    browserSessionPersistence,
-    setPersistence,
-  } from 'https://www.gstatic.com/firebasejs/9.6.9/firebase-auth.js'
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      const uid = user.uid
-      const email = user.email
-      console.log('State chnage')
-      console.log(uid, email)
-      const login = document.querySelector('.login')
-      login.style.display = 'none';
-    } else {
-      console.log('state change')
-      console.log('User is not signed')
-      const signout = document.querySelector('.signout')
-      signout.style.display = 'none';
-    }
-  })  
-  const signout = document.querySelector('.signout')
-  signout.addEventListener('click', function (e) {
-    signOut(auth)
-      .then(() => {
-        // Sign-out successful.
-        console.log(auth.currentUser)
-        console.log('signed out')
-        const login = document.querySelector('.login')
-      login.style.display = 'block';
-      })
-      .catch((error) => {
-        // An error happened.
-      })
-  })   
-  const submit = document.getElementById('share')
-  const name = document.getElementById('name').value;
-  const title = document.getElementById('heading').value;
-  const body = document.getElementById('body').value;
-  submit.addEventListener('click',function(e) {
-  var newDocRef = doc(collection(storedb,"stories"));
-  setDoc(newDocRef,{
-    name:`${name}`,
-    body:`${body}`,
-    title:`${title}`,
-    id:newDocRef.id,
-    timestamp:serverTimestamp()
-  }).then(function (result) {
-    alert('story successfully added');
-    window.location.refresh();
-  })
-  })
-</script>
